@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/python3 
 
 balance = int(input("How much money do you have? "))
 expensesRec = input("Add an expense or income record with description and amount:\n")
