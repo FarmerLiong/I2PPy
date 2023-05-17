@@ -1,14 +1,49 @@
 #!/usr/bin/python3
-
 class Point:
     def __init__(self, x, y):
-        self.x = x
-        self.y = y
-    def move_by(self, dx, dy):
-        self.x += dx
-        self.y += dy
-    def sayhi(self):
-        print("I am a point")
+        self._x = x
+        self._y = y
+
+    def __repr__(self):
+        return __class__.__name__+repr((self._x, self._y))
+    
+class ColorPoint(Point):
+    def __init__(self, x, y, color):
+        super().__init__(x, y)
+        self._color = color
+
+    def __repr__(self):
+        return __class__.__name__+repr((self._x, self._y, self._color))
+    
+    
+        
+
+
+
+# import re
+# 
+# def readStringToDict(inList, splitSymbol):
+#     resultDict = {}
+#     for e in inList:
+#         if e[1:] in resultDict.keys():
+#             resultDict[e[1:]] += 1
+#         else:
+#             resultDict[e[1:]] = 1
+#     return(resultDict)
+# 
+# def sortDic(inDic):
+#     sortList = []
+#     sortList = sorted(inDic.items(), key = lambda x:(x[1], x[0]), reverse = True)
+#     return sortList
+# 
+# with open("name.txt", encoding = 'utf-8') as fh:
+#     resultArray = []
+#     for line in fh.readlines():
+#         line = line.strip()
+#         resultArray.append(line)
+# 
+# wordDic = readStringToDict(resultArray, "[., ;]")
+# print(sortDic(wordDic))
 
 # def readStringToDict(inputStr,splitSymbol):	
 #   inList=inputStr.split(splitSymbol)
